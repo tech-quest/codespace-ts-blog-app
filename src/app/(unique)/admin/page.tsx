@@ -32,13 +32,13 @@ export default function AdminPage() {
       {fetchStudyError && (
         <MyStudyAlert
           message={fetchStudyError.message}
-          description="API (/api/admin/articles) の開発が完了すると「記事の一覧」が表示されるようになります。"
+          description="GET: API (/api/admin/articles) の開発が完了すると「記事の一覧」が表示されるようになります。"
         />
       )}
       {deleteStudyError && (
         <MyStudyAlert
           message={deleteStudyError.message}
-          description="API (/api/admin/articles/:id) の開発が完了すると削除ボタンをクリックした際に「選択した記事の変更内容をデータベースから削除」できるようになります。"
+          description="DELETE: API (/api/admin/articles/:id) の開発が完了すると削除ボタンをクリックした際に「選択した記事の変更内容をデータベースから削除」できるようになります。"
         />
       )}
     </MyPageContainer>
