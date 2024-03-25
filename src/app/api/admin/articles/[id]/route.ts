@@ -32,7 +32,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
 
   const id = Number(params.id);
   if (Number.isNaN(id)) {
-    return NextResponse.json({ error: { message: 'ID 形式が不正な形式となっています' } }, { status: 404 });
+    return NextResponse.json({ error: { message: 'ID 形式が不正な形式となっています' } }, { status: 400 });
   }
 
   const requiredMessage = '未入力の内容があります';
